@@ -1,12 +1,12 @@
 <?php
 /*
-Theme Name: Data Robot
-Theme URI: https://hasayone.com
-Author: Alexandr Orlovskiy
-Description: Special theme for Data Robot Test
-Version: 1.0.0
-Text Domain: datarobot
-*/
+  Theme Name: Data Robot
+  Theme URI: https://hasayone.com
+  Author: Alexandr Orlovskiy
+  Description: Special theme for Data Robot Test
+  Version: 1.0.0
+  Text Domain: datarobot
+ */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
@@ -14,24 +14,24 @@ Text Domain: datarobot
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?>><?php wp_body_open(); ?><div id="page">
-            <div class="site-title"><div class="site-title-bg">
-                    <h1><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-                    <?php
-                    $blank_description = get_bloginfo('description', 'display');
-                    if ($blank_description || is_customize_preview()) :
-                        ?>
-                        <p class="site-description"><?php echo esc_html($blank_description); ?></p>
-                    <?php endif; ?>
-                </div></div>
-            <?php the_custom_logo(); ?>
+    <body <?php body_class(); ?>><?php wp_body_open(); ?>
 
-            <footer id="colophon" class="site-footer"><div class="site-info">
-                    <?php esc_html_e('Intentionally Blank', 'intentionally-blank'); ?>
-                    <?php /* translators: Proudly powered by WordPress */ ?>
-                    - <a href="<?php echo esc_url(__('https://wordpress.org/', 'intentionally-blank')); ?>"><?php printf(esc_html__('Proudly powered by %s', 'intentionally-blank'), 'WordPress'); ?></a>
-                </div></footer>
-        </div><!-- #page -->
+        <!--
+            You need to get raw data from a remote server( link ),
+            process it and then be able to output structured content in your template.  
+        -->  
+        
+        <?php
+        $response = wp_remote_get('https://api.jsonbin.io/b/5dd7cefb040d843991f7183c');
+        $posts = json_decode(wp_remote_retrieve_body($response));
+        echo '<div class="latest-posts">';
+        foreach ($posts->jobs as $post) {
+           // echo '<h2>ID = ' . $post->id . '</h2>';
+        }
+        echo '</div>';
+        ?>
+
+
         <?php wp_footer(); ?>
     </body>
 </html>
