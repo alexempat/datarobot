@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Data Robot
 Theme URI: https://hasayone.com
@@ -7,3 +6,124 @@ Description: Special theme for Data Robot Test
 Version: 1.0.0
 Text Domain: datarobot
 */
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body, * {
+	font-family: 'Roboto';
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Titillium Web';
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Front Page
+--------------------------------------------------------------*/
+.fp {
+	margin: 100px 0;
+}
+
+.fp-head h1 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 37px;
+	line-height: 43px;
+	color: #23232D;
+	display: block;
+	width: 100%;
+}
+
+.fp-head.uk-container {
+	margin-bottom: 48px;
+}
+
+.fp-card__content {
+	background: #FFFFFF;
+	border: 1px solid #D0D8E2;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: calc(50% - 24px);
+	border-radius: 6px;
+}
+
+.fp-card__content:nth-child(odd) {
+	margin-right: 12px;
+}
+
+.fp-card__content:nth-child(even) {
+	margin-left: 12px;
+}
+
+.uk-grid .fp-card__content {
+	padding: 24px;
+	margin-bottom: 24px;
+}
+
+.fp-card__content-top h3 {
+	font-family: Titillium Web;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 30px;
+	color: #23232D;
+}
+
+.fp-card__content-center {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 24px;
+}
+
+.fp-card__content-center > * {
+	color: #53718F;
+}
+
+.fp-card__content-center-location:before {
+	content: '';
+	display: block;
+	background: url("./assets/img/icon/map.svg") no-repeat;
+	width: 11px;
+	height: 15px;
+	float: left;
+	margin: 4px 11px 0 0;
+}
+
+.fp-card__content-center-department:before {
+	content: '';
+	display: block;
+	background: url("./assets/img/icon/people.svg") no-repeat;
+	width: 14px;
+	height: 11px;
+	float: left;
+	margin: 6px 11px 0 0;
+}
+
+.fp-card__content-center * + * {
+	margin-left: 24px;
+}
+
+.fp-card__content-bottom a {
+	font-family: Titillium Web;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 28px;
+	color: #2D8FE2;
+}
+
+.fp-card__content-bottom a img {
+	margin-left: 7px;
+}
+
+.fp-card__content-icon {
+	margin-right: 11px;
+}

@@ -1,0 +1,98 @@
+.fp {
+    margin: 100px 0;
+    &-head {
+        h1 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 37px;
+            line-height: 43px;
+            color: #23232D;
+            display: block;
+            width: 100%;
+        }
+        &.uk-container {
+            margin-bottom: 48px;
+        }
+    }
+    &-card{
+        &__content {    
+            background: #FFFFFF;
+            border: 1px solid #D0D8E2;
+            box-sizing: border-box;
+            width: calc(50% - 24px);
+            border-radius: 6px;
+            &:nth-child(odd) {
+                margin-right: 12px;
+            }
+            &:nth-child(even) {
+                margin-left: 12px;
+            }
+            .uk-grid & {                
+                padding: 24px;
+                margin-bottom: 24px;
+            }
+
+            &-top {
+                h3 {
+                    font-family: Titillium Web;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 30px;
+                    color: #23232D;
+                }
+            }
+            &-center{
+                display: flex;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 24px;
+                & > * {color: #53718F;}
+                &-location {
+                    &:before{
+                        content: '';
+                        display: block;
+                        background: url('./assets/img/icon/map.svg') no-repeat;
+                        width: 11px;
+                        height: 15px;
+                        float: left;
+                        margin: 4px 11px 0 0;
+                    }
+                }
+                &-department {
+                    &:before{
+                        content: '';
+                        display: block;
+                        background: url('./assets/img/icon/people.svg') no-repeat;
+                        width: 14px;
+                        height: 11px;
+                        float: left;
+                        margin: 6px 11px 0 0;
+                    }
+                }
+                & * + * {
+                    margin-left: 24px;
+                }
+            }
+            &-bottom {
+                a {
+                    font-family: Titillium Web;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #2D8FE2;
+
+                    img {
+                        margin-left: 7px;
+                    }
+                }
+            }
+            &-icon {
+                margin-right: 11px;
+            }
+        } 
+    }
+}  
