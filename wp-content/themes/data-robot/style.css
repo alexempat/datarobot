@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 48px;
 }
 
+.fp-card.uk-grid {
+	margin-right: -12px;
+}
+
 .fp-card__content {
 	background: #FFFFFF;
 	border: 1px solid #D0D8E2;
@@ -50,16 +54,9 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 6px;
 }
 
-.fp-card__content:nth-child(odd) {
-	margin-right: 12px;
-}
-
-.fp-card__content:nth-child(even) {
-	margin-left: 12px;
-}
-
 .uk-grid .fp-card__content {
 	padding: 24px;
+	margin-right: 24px;
 	margin-bottom: 24px;
 }
 
@@ -70,6 +67,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 22px;
 	line-height: 30px;
 	color: #23232D;
+}
+
+.fp-card__content-top h3:hover {
+	text-decoration: underline;
 }
 
 .fp-card__content-center {
@@ -120,7 +121,11 @@ h1, h2, h3, h4, h5, h6 {
 	color: #2D8FE2;
 }
 
-.fp-card__content-bottom a img {
+.fp-card__content-bottom a:hover {
+	color: #2575b9;
+}
+
+.fp-card__content-bottom a svg {
 	margin-left: 7px;
 }
 
