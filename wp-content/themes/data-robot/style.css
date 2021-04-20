@@ -37,8 +37,52 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
+.fp-head__button {
+	position: relative;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 26px;
+	color: #53718F;
+	text-align: left;
+	cursor: pointer;
+	margin-right: 12px;
+	border: 1px solid #53718F;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 6px;
+	width: 250px;
+	padding: 6px 15px;
+}
+
+.fp-head__button span {
+	width: 207px;
+	position: relative;
+	display: inline-block;
+}
+
 .fp-head.uk-container {
 	margin-bottom: 48px;
+}
+
+.fp-head .uk-dropdown.uk-open {
+	width: 250px;
+}
+
+.fp-head .uk-dropdown.uk-open li a {
+	position: relative;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 26px;
+	color: #53718F;
+}
+
+.fp-head .uk-dropdown.uk-open li a:hover {
+	font-weight: 600;
 }
 
 .fp-card.uk-grid {
@@ -131,4 +175,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .fp-card__content-icon {
 	margin-right: 11px;
+}
+
+.fp-pagination {
+	background: #E1E8F0;
+	border-radius: 6px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	margin-top: 40px;
+}
+
+.fp-pagination > a {
+	font-family: Titillium Web;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 28px;
+	color: #53718F;
+	padding: 6px 19px;
+	margin: 4px;
+}
+
+.fp-pagination > a.uk-active, .fp-pagination > a:hover {
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px 6px 8px rgba(54, 77, 114, 0.08), 0px 2px 4px rgba(54, 77, 114, 0.18);
+	box-shadow: 0px 6px 8px rgba(54, 77, 114, 0.08), 0px 2px 4px rgba(54, 77, 114, 0.18);
+	border-radius: 4px;
+	color: #23232D;
 }
