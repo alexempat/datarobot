@@ -57,7 +57,7 @@ if (!isset($_REQUEST['from'])) {
         $i = $from;
         foreach (array_slice($posts->jobs, $from) as $post) {
             $i++;
-            if ($i > ($from + 10)) {
+            if ($i > ($from + $articles_per_page)) {
                 break;
             }
             $department_id = $post->departments[0];
