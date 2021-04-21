@@ -1,0 +1,46 @@
+<div class="uk-container " uk-filter="target: .js-filter">
+    <div class="fp-head uk-container uk-grid uk-position-relative">
+        <h1>Our open positions</h1>
+
+        <!-- Title & Filter -->
+        <div class="uk-position-top-right">
+            <button class="fp-head__button" type="button"><span>All departments</span></button>
+            <div uk-dropdown="mode: click" style="display: none" uk-overflow-auto>
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li class="uk-active" uk-filter-control><a href="">All departments</a></li>
+                        {% for department in departments %}               
+                        <li uk-filter-control="[data-cat-filter*='{{ department.name }}']"><a href="#">{{ department.name }}</a></li>
+                        {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <ul class="fp-card uk-grid js-filter uk-position-relative">
+        {% for job in jobs %}
+            <li class="fp-card__content" id="" data-cat-filter="{% for department in departments %}{% if department.id == job.departments[0] %}{{ department.name }}{% endif %}{% endfor %}">
+                    <div class="fp-card__content-top">
+                        <a href="{{ job.absolute_url }}" target="_blank"><h3>{{ job.title }}</h3></a>
+                    </div>
+
+                    <div class="fp-card__content-center">
+                        <div class="fp-card__content-center-location">
+                            {{ job.location.name }}
+                        </div>
+                        <div class="fp-card__content-center-department">
+                            {% for department in departments %}
+                                {% if department.id == job.departments[0] %}                
+                                    {{ department.name }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div> 
+
+                    <div class="fp-card__content-bottom">
+                        <a href="{{ job.absolute_url }}" target="_blank">Learn More</a>
+                    </div>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
